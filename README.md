@@ -53,9 +53,10 @@ The model is trained over the dataset from [Caltech Vision Group](http://www.vis
 + Planes
 + Cars
 
-Once trained it was tested against few images taken from the dataset
+Once trained it was tested against few images taken from the dataset. **Note** this trained model is in the repository file `model_1.pkl`
 
 ```python
+trained_model = load_model("model_1.pkl")
 # For readability
 read = cv2.imread
 test_images  = [read("data_set/motorbikes_test/img004.jpg"),
