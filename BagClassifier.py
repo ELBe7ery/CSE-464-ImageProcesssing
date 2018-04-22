@@ -147,3 +147,32 @@ class BagClassifier(object):
         if(verbose == 1):
             print(self.svm.predict(feature_vector), self.class_labels)
         return self.svm.predict(feature_vector)
+
+
+def save_model(obj, file_name):
+    """
+    exports the model for using later
+    
+    ## arguments
+    + obj : the BagClassifier object
+    + file_name : the model dump file name to be loaded later [INCLUDING THE EXTENSION]
+    """
+    joblib.dump((obj.svm,obj.kmeans, obj.num_features, obj.dataset_dir, obj.normalized), file_name, compress=3)
+    
+def load_model(model_name):
+    """
+    creats a model from the dump file containing the model parameters
+    
+    ## arguments
+    + model_name : the dump file name [INCLUDING THE EXTENSION]
+    
+    ## returns
+    + obj : the created BagClassifier object
+    """
+    
+    _svm, _kmeans, _num_features, _dataset_dir, _normalized = joblib.load(model_name)
+    obj = BagClassifier(_dataset_dir, _num_features)
+    obj.svm = _svm
+    obj.kmeans = _kmeans
+    obj.normalized = _normalized
+    return obj
