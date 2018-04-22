@@ -3,11 +3,24 @@
 ## Section : 2
 ## ID : 1300759
 
+## Table of contents
+<!-- TOC -->
+
+
+- [How to use](#how-to-use)
+- [Algorithm details](#algorithm-details)
+    - [Feature extraction and dataset building](#feature-extraction-and-dataset-building)
+    - [Clustering and obtaining the bag of features](#clustering-and-obtaining-the-bag-of-features)
+    - [Machine learning classifier](#machine-learning-classifier)
+    - [Inference](#inference)
+- [Results](#results)
+
+<!-- /TOC -->
 ## How to use
 + You need a `python 3.x interpreter`
 + Dataset directory must be given when constructing the classifier object
     + Once trained you can use the helper method `save_model`
-    + In case you already have a trained model, the method `load_model` can be used by given it the `.pkl` file
+    + In case you already have a trained model, the method `load_model` can be used by giving it the `.pkl` file
 
 ## Algorithm details
 
