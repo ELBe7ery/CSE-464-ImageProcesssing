@@ -1,4 +1,4 @@
-# Image Processing Assignment 2
+# Image Processing Assignment 2 - Bag of features computer vision classifier
 ## Name: Abdelrahman Mohamed Abdelhamid Ali Elbehery
 ## Section : 2
 ## ID : 1300759
