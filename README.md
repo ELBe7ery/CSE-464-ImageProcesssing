@@ -37,3 +37,11 @@ The algorithm **Does not need to re-train** the neural network every time a user
 + Same steps as the current algorithms until the neural network inference
 + Once the network outputs the face feature vectors, a Kmeans clustering algorithm will be used to determine to which cluster center this feature vector belongs to
 + Then using a database query we can filter the face vector whose distance from the cluster center is almost equal the current feature vector distance and who also belong to the same cluster. In such case the calculation of distance among all the items in the database is not needed
+
+## Screenshots
+
+![](assets/2018-05-02-02-04-36.png)
+
+![](assets/2018-05-02-02-04-11.png)
+
+![](assets/2018-05-02-02-05-21.png)
